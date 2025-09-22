@@ -376,8 +376,16 @@
         </div>
     </footer>
 
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 flex flex-col sm:flex-row items-center justify-center text-center space-y-2 sm:space-y-0 sm:space-x-4 z-50" style="display: none;">
+        <p class="text-sm">We use cookies to improve your experience and for marketing purposes. By continuing, you agree to our <a href="https://www.abogadosdemigracion.com.co/politica-privacidad" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-400">Privacy Policy</a>.</p>
+        <button id="accept-cookies" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg flex-shrink-0">Accept</button>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // ... (código del menú y animaciones, sin cambios) ...
+
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
@@ -535,6 +543,31 @@
                 resultArea.innerHTML = content;
                 resultArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
+
+            // Cookie Consent Banner Logic
+            const consentBanner = document.getElementById('cookie-consent-banner');
+            const acceptCookiesBtn = document.getElementById('accept-cookies');
+
+            // Function to check for the consent cookie
+            function checkCookieConsent() {
+                if (!document.cookie.split(';').some((item) => item.trim().startsWith('cookie_consent='))) {
+                    consentBanner.style.display = 'flex';
+                }
+            }
+
+            if (acceptCookiesBtn) {
+                acceptCookiesBtn.addEventListener('click', function() {
+                    // Set a cookie that expires in 1 year
+                    const d = new Date();
+                    d.setTime(d.getTime() + (365*24*60*60*1000));
+                    let expires = "expires="+ d.toUTCString();
+                    document.cookie = "cookie_consent=true;" + expires + ";path=/";
+                    consentBanner.style.display = 'none';
+                });
+            }
+
+            // Check for consent when the page loads
+            checkCookieConsent();
         });
     </script>
 </body>
