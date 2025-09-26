@@ -53,29 +53,14 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .step-card::before {
-            content: counter(step);
-            counter-increment: step;
-            position: absolute;
-            top: -1.5rem;
-            left: -1.5rem;
-            width: 3rem;
-            height: 3rem;
-            background-color: #e0f2fe;
-            color: #0284c7;
-            border-radius: 9999px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1.25rem;
-            border: 4px solid white;
-        }
         .radio-custom:checked + .radio-custom-label {
             @apply bg-blue-600 text-white border-blue-600 ring-2 ring-blue-400;
         }
         .radio-custom-label {
             @apply px-5 py-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors text-gray-700 text-sm;
+        }
+        .faq-item {
+            @apply bg-white p-6 rounded-lg shadow-sm;
         }
     </style>
 </head>
@@ -93,7 +78,7 @@
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="#why-us" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Why Us</a>
                     <a href="#testimonials" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Testimonials</a>
-                    <a href="#process" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Our Process</a>
+                    <a href="#faq" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
                     <a href="#investment" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Investment</a>
                     <a href="#form-section" class="btn bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 py-2 px-4 text-sm">Check My Case</a>
                 </div>
@@ -107,7 +92,7 @@
         <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg py-2">
             <a href="#why-us" class="block text-gray-700 hover:bg-blue-50 hover:text-blue-600 px-4 py-2 text-sm">Why Us</a>
             <a href="#testimonials" class="block text-gray-700 hover:bg-blue-50 hover:text-blue-600 px-4 py-2 text-sm">Testimonials</a>
-            <a href="#process" class="block text-gray-700 hover:bg-blue-50 hover:text-blue-600 px-4 py-2 text-sm">Our Process</a>
+            <a href="#faq" class="block text-gray-700 hover:bg-blue-50 hover:text-blue-600 px-4 py-2 text-sm">FAQ</a>
             <a href="#investment" class="block text-gray-700 hover:bg-blue-50 hover:text-blue-600 px-4 py-2 text-sm">Investment</a>
             <a href="#form-section" class="block text-gray-700 hover:bg-blue-50 hover:text-blue-600 px-4 py-2 text-sm">Check My Case</a>
         </div>
@@ -266,49 +251,26 @@
         </div>
     </section>
 
-    <!-- DETAILED PROCESS -->
-    <section id="process" class="py-20 md:py-28 bg-white section-fade-in" style="counter-reset: step;">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-20 text-blue-800">Our Detailed Legal Process</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12">
-                <div class="step-card relative bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-500">
-                    <h3 class="text-xl font-bold text-blue-700 mb-3">1. Immigration Strategy & Planning</h3>
-                    <p class="text-gray-600">We create a robust legal strategy for your case and plan each step clearly and responsibly, including travel arrangements.</p>
-                </div>
-                <div class="step-card relative bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-500">
-                    <h3 class="text-xl font-bold text-blue-700 mb-3">2. Document Collection & Review</h3>
-                    <p class="text-gray-600">An expert lawyer reviews your documents and form answers to ensure they meet all visa requirements and align with the designed strategy.</p>
-                </div>
-                 <div class="step-card relative bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-500">
-                    <h3 class="text-xl font-bold text-blue-700 mb-3">3. Submission to the Ministry</h3>
-                    <p class="text-gray-600">We prepare, organize, and submit your complete application through the official SITAC system of the Colombian Ministry of Foreign Affairs.</p>
-                </div>
-                <div class="step-card relative bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-500">
-                    <h3 class="text-xl font-bold text-blue-700 mb-3">4. Follow-Up & Requirements</h3>
-                    <p class="text-gray-600">We monitor your case and diligently respond to any request for additional information that the immigration authority may require.</p>
-                </div>
-                <div class="step-card relative bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-500">
-                    <h3 class="text-xl font-bold text-blue-700 mb-3">5. Approved Visa Registration</h3>
-                    <p class="text-gray-600">Once approved, we handle the mandatory registration of your visa for you in the Migración Colombia system to activate it.</p>
-                </div>
-                 <div class="step-card relative bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-500">
-                    <h3 class="text-xl font-bold text-blue-700 mb-3">6. Foreigner's ID Appointment</h3>
-                    <p class="text-gray-600">We request and schedule your appointment at Migración Colombia for you to obtain your Cédula de Extranjería (Foreigner's ID).</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- DETAILED PROCESS IS REMOVED -->
     
-     <!-- FAQ -->
+     <!-- FAQ (REPLACES DETAILED PROCESS) -->
     <section id="faq" class="py-20 md:py-28 bg-gray-50 section-fade-in">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
-             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-blue-800">Frequently Asked Questions</h2>
+             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-blue-800">Your Questions Answered</h2>
              <div class="space-y-6">
-                <div class="faq-item bg-white">
+                <div class="faq-item">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">What is the overall legal process?</h3>
+                    <p class="text-gray-700 leading-relaxed">Our legal service is designed to guide you through every stage. We begin by creating a robust legal strategy for your specific case. We then provide expert review of all your documents and application answers. Once perfect, we handle the official submission to the Ministry of Foreign Affairs, monitor the case, and manage any additional requirements. Finally, we provide full guidance for the mandatory visa registration and obtaining your Foreigner's ID (Cédula).</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">How do you help with the Foreigner's ID (Cédula de Extranjería)?</h3>
+                    <p class="text-gray-700 leading-relaxed">The Cédula is your official ID in Colombia and obtaining the appointment can be challenging. We provide expert guidance on navigating the Migración Colombia platform, advising on the best times and methods to secure your appointment efficiently, ensuring you have all necessary documents ready for a successful visit.</p>
+                </div>
+                <div class="faq-item">
                     <h3 class="text-xl font-semibold text-blue-700 mb-2">What's the difference between an 'Inadmissible' and 'Rejected' visa?</h3>
                     <p class="text-gray-700 leading-relaxed">This is a crucial distinction. An **Inadmissible** visa means the authority requires more information or a document correction; it is not a final denial. In this case, our service includes resubmitting the application as many times as needed at no extra charge for our legal fees. A **Rejected** visa is a final, discretionary decision. In this case, our service is considered complete, and reapplying would require a new service agreement after a 6-month waiting period.</p>
                 </div>
-                <div class="faq-item bg-white">
+                <div class="faq-item">
                     <h3 class="text-xl font-semibold text-blue-700 mb-2">How long does the entire process take?</h3>
                     <p class="text-gray-700 leading-relaxed">Once all documents are gathered and the application is submitted, the review period by the Ministry of Foreign Affairs is typically 3 to 5 weeks. Document collection can add additional time to this timeline.</p>
                 </div>
@@ -368,7 +330,7 @@
             </a>
             <a href="https://www.abogadosdemigracion.com.co" target="_blank" rel="noopener noreferrer" class="mb-1 text-lg block hover:text-blue-400 transition-colors">Colombian Passport</a>
             <p class="mb-2 mt-4">&copy; <span id="currentYear"></span> ColombianPassport.com. All Rights Reserved.</p>
-            <p class="text-sm mb-6">Colombian Passport is a private and independent law firm. We are not affiliated with the Colombian Ministry of Foreign Affairs or any government entity.</p>
+            <p class="text-sm mb-6">Expert legal advisory for your immigration journey.</p>
             <div class="space-x-6">
                 <a href="https://www.abogadosdemigracion.com.co/politica-privacidad" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors">Privacy Policy</a>
                 <a href="mailto:camila@colombianpassport.com" class="hover:text-blue-400 transition-colors">camila@colombianpassport.com</a>
@@ -384,8 +346,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // ... (código del menú y animaciones, sin cambios) ...
-
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
@@ -548,7 +508,6 @@
             const consentBanner = document.getElementById('cookie-consent-banner');
             const acceptCookiesBtn = document.getElementById('accept-cookies');
 
-            // Function to check for the consent cookie
             function checkCookieConsent() {
                 if (!document.cookie.split(';').some((item) => item.trim().startsWith('cookie_consent='))) {
                     consentBanner.style.display = 'flex';
@@ -557,7 +516,6 @@
 
             if (acceptCookiesBtn) {
                 acceptCookiesBtn.addEventListener('click', function() {
-                    // Set a cookie that expires in 1 year
                     const d = new Date();
                     d.setTime(d.getTime() + (365*24*60*60*1000));
                     let expires = "expires="+ d.toUTCString();
@@ -566,10 +524,8 @@
                 });
             }
 
-            // Check for consent when the page loads
             checkCookieConsent();
         });
     </script>
 </body>
 </html>
-
